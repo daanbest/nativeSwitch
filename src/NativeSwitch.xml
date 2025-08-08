@@ -41,9 +41,9 @@
                         <enumerationValue key="vertical">Vertical</enumerationValue>
                     </enumerationValues>
                 </property>
-                <property key="switchPosition" type="enumeration" defaultValue="right">
-                    <caption>Switch position</caption>
-                    <description>The position of the switch relative to the label</description>
+                <property key="labelPosition" type="enumeration" defaultValue="left">
+                    <caption>Label position</caption>
+                    <description>The position of the label relative to the switch</description>
                     <enumerationValues>
                         <enumerationValue key="left">Left</enumerationValue>
                         <enumerationValue key="right">Right</enumerationValue>

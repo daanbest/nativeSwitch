@@ -113,10 +113,10 @@ export function getProperties(
     }
     */
     if (!_values.showLabel) {
-        hidePropertiesIn(defaultProperties, _values, ["label", "labelOrientation", "switchPosition"]);
+        hidePropertiesIn(defaultProperties, _values, ["label", "labelOrientation", "labelPosition"]);
     }
     if (_values.labelOrientation === "vertical") {
-        hidePropertiesIn(defaultProperties, _values, ["switchPosition"]);
+        hidePropertiesIn(defaultProperties, _values, ["labelPosition"]);
     }
 
     return defaultProperties;
@@ -145,7 +145,7 @@ export function getPreview(values: NativeSwitchPreviewProps, isDarkMode: boolean
 
     const children =
         values.showLabel && values.labelOrientation === "horizontal"
-            ? values.switchPosition === "left"
+            ? values.labelPosition === "right"
                 ? [image, label]
                 : [label, image]
             : values.showLabel

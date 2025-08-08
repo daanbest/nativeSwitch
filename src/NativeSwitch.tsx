@@ -16,7 +16,7 @@ export const executeAction = (action?: ActionValue): void => {
 };
 
 export function NativeSwitch(props: Props): ReactElement {
-    const { label, labelOrientation, showLabel, name, onChange, booleanAttribute, switchPosition  } = props;
+    const { label, labelOrientation, showLabel, name, onChange, booleanAttribute, labelPosition  } = props;
     const combinedStyles = flattenStyles(defaultSwitchStyle, props.style);
     const styles = processStyles(combinedStyles);
     const horizontalOrientation = showLabel && labelOrientation === "horizontal";
@@ -69,7 +69,7 @@ export function NativeSwitch(props: Props): ReactElement {
             testID={`${name}$label`}
             style={[labelStyles, 
                     horizontalOrientation ? { flex: 1 } : null,
-                    horizontalOrientation && switchPosition === "left" ? { marginLeft: 8 } : null
+                    horizontalOrientation && labelPosition === "right" ? { marginLeft: 8 } : null
             ]}
         >
             {labelValue}
@@ -99,7 +99,7 @@ export function NativeSwitch(props: Props): ReactElement {
                 ]}
             >
                 {horizontalOrientation
-                    ? (switchPosition === "left"
+                    ? (labelPosition === "right"
                         ? [switchElement, labelElement]
                         : [labelElement, switchElement])
                     : (

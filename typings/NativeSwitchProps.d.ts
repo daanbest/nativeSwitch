@@ -8,7 +8,7 @@ import { ActionValue, DynamicValue, EditableValue } from "mendix";
 
 export type LabelOrientationEnum = "horizontal" | "vertical";
 
-export type SwitchPositionEnum = "left" | "right";
+export type LabelPositionEnum = "left" | "right";
 
 export interface NativeSwitchProps<Style> {
     name: string;
@@ -18,7 +18,7 @@ export interface NativeSwitchProps<Style> {
     showLabel: boolean;
     label?: DynamicValue<string>;
     labelOrientation: LabelOrientationEnum;
-    switchPosition: SwitchPositionEnum;
+    labelPosition: LabelPositionEnum;
 }
 
 export interface NativeSwitchPreviewProps {
@@ -37,5 +37,5 @@ export interface NativeSwitchPreviewProps {
     showLabel: boolean;
     label: string;
     labelOrientation: LabelOrientationEnum;
-    switchPosition: SwitchPositionEnum;
+    labelPosition: LabelPositionEnum;
 }
